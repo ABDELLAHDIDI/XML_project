@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified"
+    attributeFormDefault="unqualified">
+    <xs:element name="GINF2" type="GINF2Type" >
+        <xs:unique name="uniqueCIN">
+        <xs:selector xpath="etudiant" />
+        <xs:field xpath="@CIN" />
+      </xs:unique>
+      <xs:unique name="uniqueCNE">
+        <xs:selector xpath="etudiant" />
+        <xs:field xpath="@CNE" />
+      </xs:unique>
+      <xs:unique name="uniqueCODE">
+        <xs:selector xpath="etudiant" />
+        <xs:field xpath="@code_apogée" />
+      </xs:unique>
+    </xs:element>
+    <xs:complexType name="GINF2Type">
+        
+    <xs:sequence>
+            <xs:element name="etudiant" type="EtudiantType" maxOccurs="56" minOccurs="56" />
+        </xs:sequence>
+
+    </xs:complexType>
+    <xs:complexType name="EtudiantType">
+        
+        <xs:sequence>
+            <xs:element name="Nom" type="xs:string" />
+            <xs:element name="Prénom" type="xs:string" />
+            <xs:element name="Lieu_Naissance" type="xs:string" />
+            <xs:element name="Date_Naissance" type="DateNaissanceType" />
+            <xs:element name="NOTES" type="NotesType" />
+        </xs:sequence>
+        <xs:attribute name="CIN" type="xs:string" />
+        <xs:attribute name="CNE" type="xs:string" />
+        <xs:attribute name="code_apogée"  >
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    <xs:pattern value="(1[7-9][0-9]*|20[0-9]*)"/>
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+    </xs:complexType>
+    <xs:complexType name="DateNaissanceType">
+        <xs:sequence>
+            <xs:element name="day" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:unsignedShort">
+                        <xs:maxInclusive value="31" />
+                        <xs:minInclusive value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="month" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:unsignedShort">
+                        <xs:maxInclusive value="12" />
+                        <xs:minInclusive value="1" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+            <xs:element name="year">
+                <xs:simpleType>
+                    <xs:restriction base="xs:unsignedShort">
+                        <xs:maxExclusive value="2003" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:element>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="NotesType">
+        <xs:sequence>
+            <xs:element name="note" type="NoteType" maxOccurs="unbounded" />
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="NoteType">
+        <xs:sequence>
+            <xs:element name="note_elm" type="NoteElmType" maxOccurs="unbounded" />
+        </xs:sequence>
+        <xs:attribute name="module_code" type="xs:string" />
+        <xs:attribute name="module_name" type="xs:string" />
+    </xs:complexType>
+    <xs:complexType name="NoteElmType">
+        <xs:simpleContent>
+            <xs:extension base="xs:decimal">
+                <xs:attribute name="elm_name" type="xs:string" />
+                <xs:attribute name="poid" type="xs:integer" />
+            </xs:extension>
+        </xs:simpleContent>
+    </xs:complexType>
+</xs:schema>

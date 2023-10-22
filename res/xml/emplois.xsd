@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:element name="Emlpoi">
+   
+  <xs:complexType>
+      <xs:sequence>
+        <xs:element name="semaine" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="lundi" type="jourType"/>
+              <xs:element name="mardi" type="jourType"/>
+              <xs:element name="mercredi" type="jourType"/>
+              <xs:element name="jeudi" type="jourType"/>
+              <xs:element name="vendredi" type="jourType"/>
+              <xs:element name="samedi" type="jourType"/>
+            </xs:sequence>
+            <xs:attribute name="num" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="1" />
+                        <xs:maxInclusive value="52" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+            <xs:attribute name="annee" >
+                <xs:simpleType>
+                    <xs:restriction base="xs:integer">
+                        <xs:minInclusive value="2000" />
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:attribute>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:unique name="uniqueSemaine">
+              <xs:selector xpath="semaine"/>
+              <xs:field xpath="@num"/>
+              <xs:field xpath="@annee"/>
+    </xs:unique>
+  </xs:element>
+
+  <xs:complexType name="jourType">
+    <xs:sequence>
+      <xs:element name="séance" maxOccurs="5" minOccurs="0">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="module" type="xs:string"/>
+            <xs:element name="Professeur" type="xs:string"/>
+            <xs:element name="salle" type="xs:string"/>
+          </xs:sequence>
+          <xs:attribute name="type" type="seanceType"/>
+          <xs:attribute name="debut" type="heurType"/>
+          <xs:attribute name="fin" type="heurType"/>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+    <xs:attribute name="date" type="dateType"/>
+  </xs:complexType>
+  
+  <xs:simpleType name="seanceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="TP"/>
+      <xs:enumeration value="TD"/>
+      <xs:enumeration value="CM"/>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <xs:simpleType name="dateType">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="(0[1-9]|[12][0-9]|3[01])/(0[1-9]|1[0-2])"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="heurType">
+  <xs:restriction base="xs:string">
+    <xs:pattern value="(0[8-9]|[1][0-8])h(00|15|30|45)"/>
+  </xs:restriction>
+</xs:simpleType>
+
+
+
+</xs:schema>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><semaine annee="2022" num="50">
+        <lundi date="12/12">
+            <séance debut="08h45" fin="10h15" type="TD">
+                <module>Modélisation orienté objet UML</module>
+                <Professeur>EL ALAMI</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="10h30" fin="12h00" type="TD">
+                <module>Modélisation orienté objet UML</module>
+                <Professeur>EL ALAMI</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="14h30" fin="16h00" type="CM">
+                <module>Cycle de vie de logiciel et methodes agiles</module>
+                <Professeur>BADIR</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="16h15" fin="17h45" type="CM">
+                <module>Cycle de vie de logiciel et methodes agiles</module>
+                <Professeur>BADIR</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+
+        </lundi>
+        <mardi date="13/12">
+            <séance debut="08h45" fin="10h15" type="CM">
+                <module>GESTION DES DONNEES DISTRIBUEES</module>
+                <Professeur>FISSOUNE</Professeur>
+                <salle>Salle B20</salle>
+
+            </séance>
+            <séance debut="10h30" fin="12h00" type="TP">
+                <module>GESTION DES DONNEES DISTRIBUEES</module>
+                <Professeur>FISSOUNE</Professeur>
+                <salle>Salle B20</salle>
+
+            </séance>
+            <séance debut="14h30" fin="16h00" type="TP">
+                <module>Programmation systèmes</module>
+                <Professeur>AMECHNOUE</Professeur>
+                <salle>Salle B20</salle>
+
+            </séance>
+            <séance debut="16h15" fin="17h45" type="TP">
+                <module>Programmation systèmes</module>
+                <Professeur>AMECHNOUE</Professeur>
+                <salle>Salle B20</salle>
+
+            </séance>
+
+        </mardi>
+        <mercredi date="14/12">
+            <séance debut="08h45" fin="10h15" type="CM">
+                <module>Programmation orienté objet : Java</module>
+                <Professeur>El HADDAD</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="10h30" fin="12h00" type="TP">
+                <module>Programmation orienté objet : Java</module>
+                <Professeur>El HADDAD</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            
+            <séance debut="16h15" fin="17h45" type="CM">
+                <module>Programmation systèmes</module>
+                <Professeur>AMECHNOUE</Professeur>
+                <salle>Salle B20</salle>
+
+            </séance>
+
+        </mercredi>
+        <jeudi date="15/12">
+            <séance debut="08h45" fin="10h15" type="CM">
+                <module>Interaction homme-machine</module>
+                <Professeur>EL ALAMI</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="10h30" fin="12h00" type="TD">
+                <module>Interaction homme-machine</module>
+                <Professeur>EL ALAMI</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="14h30" fin="16h00" type="CM">
+                <module>Espagnol 2</module>
+                <Professeur>LAAMARTI</Professeur>
+                <salle>Salle B22</salle>
+
+            </séance>
+            
+
+        </jeudi>
+        <vendredi date="16/12">
+            <séance debut="08h45" fin="10h15" type="CM">
+                <module>TECHNIQUE DE COMMUNICATION</module>
+                <Professeur>ZAAMOUMI</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="10h30" fin="12h00" type="CM">
+                <module>TECHNIQUE DE COMMUNICATION</module>
+                <Professeur>ZAAMOUMI</Professeur>
+                <salle>Salle B19</salle>
+
+            </séance>
+            <séance debut="14h30" fin="16h00" type="CM">
+                <module>ASSURANCE CONTROLE QUALITE (ISO 9001)</module>
+                <Professeur>RAHALI AZOUZI</Professeur>
+                <salle>Salle A7</salle>
+
+            </séance>
+            <séance debut="16h15" fin="17h45" type="CM">
+                <module>ASSURANCE CONTROLE QUALITE (ISO 9001)</module>
+                <Professeur>RAHALI AZOUZI</Professeur>
+                <salle>Salle A7</salle>
+
+            </séance>
+
+        </vendredi>
+        <samedi date="17/12">
+
+        </samedi>
+
+    </semaine>
